@@ -1,0 +1,27 @@
+type RevenueRecognition {
+  _id: ID
+  revenue_recognition_id: String
+  fee_category: String
+  subtotal: Float
+  tax_total: Float
+  total: Float
+  payment_type: String
+  start_date_time: Date
+  end_date_time: Date
+  paid_date: Date
+  member_id: Member
+  description: String
+  additional_dates: [Date]
+  fee_id: Transaction
+  payment_id: Transaction
+  relation_id: String
+  transaction_type: String
+  package_info: JSON
+  created_at: Date
+  updated_at: Date
+}
+
+type RevenueRecognitionResponse {
+  data: [RevenueRecognition!]!
+  pagination: PaginationInfo!
+}

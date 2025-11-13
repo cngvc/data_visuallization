@@ -1,0 +1,52 @@
+type ReservationType {
+  _id: ID
+  reservation_type_id: Int
+  name: String
+  background_color: String
+  text_color: String
+  order_index: Int
+  created_at: Date
+  updated_at: Date
+}
+
+type ReservationTypeResponse {
+  data: [ReservationType!]!
+  pagination: PaginationInfo!
+}
+
+type ReservationPlayer {
+  _id: ID
+  member_id: Member
+  price_to_pay: Float
+  paid_amount: Float
+  unsubscribe_from_marketing_emails: Boolean
+  unsubscribe_from_marketing_text_alerts: Boolean
+  created_at: Date
+  updated_at: Date
+}
+
+type ReservationPlayerResponse {
+  data: [ReservationPlayer!]!
+  pagination: PaginationInfo!
+}
+
+type Reservation {
+  _id: ID
+  rental_reservation_id: Int
+  court_ids: [Court]
+  reservation_type_id: ReservationType
+  instructors: String
+  is_lesson: Boolean
+  start_time: Date
+  end_time: Date
+  status: String
+  cancelled_on: Date
+  player_ids: [ReservationPlayer]
+  created_at: Date
+  updated_at: Date
+}
+
+type ReservationResponse {
+  data: [Reservation!]!
+  pagination: PaginationInfo!
+}

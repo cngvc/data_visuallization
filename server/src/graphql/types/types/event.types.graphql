@@ -1,0 +1,60 @@
+type Event {
+  _id: ID
+  event_id: Int
+  category_id: EventCategory
+  reservation_id: Reservation
+  name: String
+  start_date: Date
+  end_date: Date
+  background_color: String
+  is_registered: Boolean
+  sso_url: String
+  image_url: String
+  max_registrants: Int
+  registered_count: Int
+  created_at: Date
+  updated_at: Date
+}
+
+type EventResponse {
+  data: [Event!]!
+  pagination: PaginationInfo!
+}
+
+type EventCategory {
+  _id: ID
+  event_category_id: Int
+  name: String
+  background_color: String
+  text_color: String
+  is_public: Boolean
+  created_at: Date
+  updated_at: Date
+}
+
+type EventCategoryResponse {
+  data: [EventCategory!]!
+  pagination: PaginationInfo!
+}
+
+type EventRegistration {
+  _id: ID
+  event_id: Event
+  member_id: Member
+  event_date_id: Int
+  start_time: Date
+  end_time: Date
+  price_to_pay: Float
+  paid_amount: Float
+  unsubscribe_from_marketing_emails: Boolean
+  unsubscribe_from_marketing_text_alerts: Boolean
+  signed_up_on_utc: Date
+  cancelled_on_utc: Date
+  created_at: Date
+  updated_at: Date
+}
+
+type EventRegistrationResponse {
+  data: [EventRegistration!]!
+  pagination: PaginationInfo!
+}

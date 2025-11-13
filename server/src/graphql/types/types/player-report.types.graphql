@@ -1,0 +1,22 @@
+type PlayerReport {
+  _id: ID
+  report_id: String
+  member_id: Member
+  start_date_time: Date
+  end_date_time: Date
+  created_on_utc: Date
+  is_cancelled: Boolean
+  is_approved: Boolean
+  cancelled_on_utc: Date
+  reservation_member_id: Int
+  court_ids: [Court]
+  booking_type: String
+  reservation_id: Reservation
+  created_at: Date
+  updated_at: Date
+}
+
+type PlayerReportResponse {
+  data: [PlayerReport!]!
+  pagination: PaginationInfo!
+}

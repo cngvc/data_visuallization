@@ -1,0 +1,365 @@
+input SalesSummaryFilterInput {
+  search: String
+  start_date: String
+  end_date: String
+}
+
+input RevenueRecognitionFilterInput {
+  search: String
+  start_date: String
+  end_date: String
+  payment_type: String
+  transaction_type: String
+}
+
+input TransactionsFilterInput {
+  search: String
+  start_date: String
+  end_date: String
+}
+
+input FamilyFilterInput {
+  search: String
+}
+
+input EventCategoryFilterInput {
+  search: String
+  is_public: Boolean
+}
+
+input ImportHistoryFilterInput {
+  start_date: String
+  end_date: String
+  status: String
+  collection_name: String
+}
+
+input MemberFilterInput {
+  search: String
+  membership_type_id: ID
+  membership_status: [String]
+  membership_date_range: MembershipDateRangeInput
+}
+
+input MembershipDateRangeInput {
+  start: String
+  end: String
+}
+
+input EventFilterInput {
+  search: String
+  category_id: ID
+  name: String
+  start_date: String
+  end_date: String
+  location: String
+  is_registered: Boolean
+}
+
+input ReservationFilterInput {
+  search: String
+  member_id: ID
+  court_ids: [ID]
+  reservation_type_id: ID
+  start_date: String
+  end_date: String
+  status: String
+  is_lesson: Boolean
+}
+
+input PlayerReportFilterInput {
+  search: String
+  member_id: ID
+  booking_type: String
+  start_date: String
+  end_date: String
+  is_approved: Boolean
+  court_ids: [ID]
+}
+
+input ReservationPlayerFilterInput {
+  search: String
+  member_id: ID
+  status: String
+  start_date: String
+  end_date: String
+}
+
+input EventRegistrationFilterInput {
+  search: String
+  member_id: ID
+  status: String
+  start_date: String
+  end_date: String
+}
+
+input TransactionFilterInput {
+  search: String
+  member_id: ID
+  start_date: String
+  end_date: String
+  category: String
+  payment_type: String
+  transaction_type: String
+}
+
+input CourtInput {
+  order_index: Int
+  label: String!
+  type_name: String!
+}
+
+input MembershipTypeInput {
+  name: String!
+  order_index: Int
+  description: String
+  short_code: String
+  is_active: Boolean
+  is_payment_required: Boolean
+  purchase_start_date: Date
+  purchase_end_date: Date
+  is_restrict_by_age: Boolean
+  allow_min_age: Int
+  allow_max_age: Int
+  days_past_due_to_suspend: Int
+  days_past_due_to_cancel: Int
+  initiation_price: Float
+  monthly_price: Float
+  quarterly_price: Float
+  annual_price: Float
+  lifetime_price: Float
+  custom_price: Float
+  custom_frequency_value: String
+}
+
+input ReservationTypeInput {
+  name: String!
+  order_index: Int
+  background_color: String
+  text_color: String
+}
+
+input EventCategoryInput {
+  name: String!
+  background_color: String!
+  text_color: String!
+  is_public: Boolean
+}
+
+input FamilyInput {
+  name: String!
+  number: String
+}
+
+input MemberInput {
+  family_id: ID
+  first_name: String!
+  last_name: String!
+  gender: String
+  email: String!
+  phone: String
+  date_of_birth: Date
+  address: String
+  city: String
+  state: String
+  zip_code: String
+  membership_type_id: ID
+  membership_assignment_type: String
+  membership_status: String
+  membership_start_date: Date
+  membership_end_date: Date
+  family_role: String
+  allow_child_login: Boolean
+  profile_image_url: String
+}
+
+input EventInput {
+  category_id: ID
+  reservation_id: ID
+  name: String!
+  start_date: Date!
+  end_date: Date
+  background_color: String
+  is_registered: Boolean
+  sso_url: String
+  image_url: String
+  max_registrants: Int
+  registered_count: Int
+}
+
+input PlayerReportInput {
+  member_id: ID
+  start_date_time: String!
+  end_date_time: String!
+  is_cancelled: Boolean
+  is_approved: Boolean
+  cancelled_on_utc: String
+  reservation_member_id: ID
+  court_ids: [ID]
+  booking_type: String!
+  reservation_id: ID
+}
+
+input ReservationInput {
+  reservation_type_id: ID
+  court_ids: [ID]
+  start_time: String
+  end_time: String
+  status: String
+  cancelled_on: String
+  player_ids: [ID]
+}
+
+input SalesSummaryInput {
+  fee_category_name: String
+  item_name: String
+  revenue_category_name: String
+  amount: Float
+  amount_with_no_tax: Float
+  tax_total: Float
+  member_id: ID
+  family_id: ID
+  start: Date
+  end: Date
+  court_labels: String
+  payment_type: String
+  transaction_type: String
+  transaction_id: Int
+  transaction_date: Date
+  paid_date: Date
+  item_cost: Float
+}
+
+input RevenueRecognitionInput {
+  fee_category: String
+  subtotal: Float
+  tax_total: Float
+  total: Float
+  payment_type: String
+  start_date_time: Date
+  end_date_time: Date
+  paid_date: Date
+  member_id: ID
+  description: String
+  additional_dates: [Date]
+  fee_id: ID
+  payment_id: ID
+  relation_id: String
+  transaction_type: String
+  package_info: JSON
+}
+
+input TransactionInput {
+  member_id: ID
+  transaction_type: String!
+  payment_type: String!
+  reservation_id: ID
+  event_id: ID
+  transaction_date: Date
+  is_paid: Boolean
+  transaction_id: Int
+  subtotal: Float
+  tax_total: Float
+  total: Float
+  unpaid_amount: Float
+  paid_on: Date
+  category: String
+  reservation_start: Date
+  reservation_end: Date
+  account_creation_date: Date
+}
+
+input TimeRangeInput {
+  start_date: String
+  end_date: String
+}
+
+input ReservationTypeFilterInput {
+  search: String
+}
+
+input MembershipTypeFilterInput {
+  search: String
+}
+
+input OrganizationFilterInput {
+  search: String
+}
+
+input OrganizationInput {
+  name: String!
+  description: String
+}
+
+input AuthInput {
+  email: String!
+  password: String!
+  role: UserRole
+  organization_id: ID
+}
+
+input SignupInput {
+  email: String!
+  password: String!
+  first_name: String!
+  last_name: String!
+  organization_name: String!
+}
+
+input UserOrganizationInput {
+  email: String!
+  first_name: String
+  last_name: String
+  organization_id: ID!
+  role: UserRole!
+}
+
+input RemoveOrganizationUserInput {
+  user_id: ID!
+  organization_id: ID!
+}
+
+input LoginInput {
+  email: String!
+  password: String!
+}
+
+input LogoutInput {
+  refreshToken: String!
+}
+
+input RefreshTokenInput {
+  refreshToken: String!
+}
+
+input ForgotPasswordInput {
+  email: String!
+}
+
+input ResetPasswordInput {
+  token: String!
+  password: String!
+  confirmPassword: String!
+}
+
+input UpdateMeInput {
+  first_name: String
+  last_name: String
+  email: String
+  current_organization_id: ID
+}
+
+input ChangePasswordInput {
+  current_password: String!
+  new_password: String!
+}
+
+input AuthFilterInput {
+  search: String
+  organization_id: ID
+  role: UserRole
+}
+
+input CourtFilterInput {
+  search: String
+}

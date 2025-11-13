@@ -1,0 +1,17 @@
+type Organization {
+  _id: ID
+  name: String
+  description: String
+  slug: String
+  created_at: Date
+  updated_at: Date
+}
+
+type OrganizationUsers {
+  organization: Organization!
+  userOrganizations: [UserOrganization!]!
+}
+
+type OrganizationResponse {
+  data: OrganizationUsers
+}

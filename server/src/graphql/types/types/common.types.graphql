@@ -1,0 +1,26 @@
+type PaginationInfo {
+  total: Int!
+  page: Int!
+  limit: Int!
+  pages: Int!
+}
+
+type MutationResponse {
+  success: Boolean!
+  message: String!
+}
+
+type Chart {
+  labels: [String!]!
+  datasets: [Float!]!
+  title: String
+}
+
+type CategoryData {
+  name: String!
+  value: Float!
+}
+
+type ChartResponse {
+  data: Chart!
+}

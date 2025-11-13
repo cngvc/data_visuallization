@@ -1,0 +1,32 @@
+type MembershipType {
+  _id: ID
+  membership_type_id: Int
+  name: String
+  order_index: Int
+  description: String
+  short_code: String
+  is_active: Boolean
+  is_payment_required: Boolean
+  purchase_start_date: Date
+  purchase_end_date: Date
+  is_restrict_by_age: Boolean
+  allow_min_age: Int
+  allow_max_age: Int
+  days_past_due_to_suspend: Int
+  days_past_due_to_cancel: Int
+  initiation_price: Float
+  monthly_price: Float
+  quarterly_price: Float
+  annual_price: Float
+  lifetime_price: Float
+  custom_price: Float
+  custom_frequency_value: String
+  cost_type_additional_features: JSON
+  created_at: Date
+  updated_at: Date
+}
+
+type MembershipTypeResponse {
+  data: [MembershipType!]!
+  pagination: PaginationInfo!
+}

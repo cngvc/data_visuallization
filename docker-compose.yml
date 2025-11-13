@@ -1,0 +1,85 @@
+services:
+  nginx:
+    image: nginx:alpine
+    container_name: nginx
+    restart: always
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - client
+      - server
+    networks:
+      - app-network
+  mongodb:
+    image: mongodb/mongodb-community-server
+    container_name: mongodb_container
+    restart: always
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGODB_INITDB_ROOT_USERNAME=root
+      - MONGODB_INITDB_ROOT_PASSWORD=Asdfgh123
+      - MONGO_INITDB_DATABASE=courtreserve
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - app-network
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: server
+    restart: always
+    ports:
+      - "4000:4000"
+    environment:
+      - NODE_ENV=production
+      - DATABASE_URL=mongodb://root:Asdfgh123@mongodb_container:27017/courtreserve?authSource=admin
+      - LOG_DIR=/app/logs
+    depends_on:
+      - mongodb
+    volumes:
+      - app_logs:/app/logs
+      - /app/node_modules
+      - ./data:/app/data
+    networks:
+      - app-network
+
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    container_name: client
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      - VITE_API_BASE_URL=/
+    depends_on:
+      - server
+    volumes:
+      - /app/node_modules
+    networks:
+      - app-network
+  mailpit:
+    image: axllent/mailpit
+    container_name: mailpit
+    restart: always
+    environment:
+      - MP_MAX_MESSAGES=1000
+      - MP_SMTP_PORT=1025
+    ports:
+      - "1025:1025" # SMTP server
+      - "8025:8025" # Web UI
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  mongodb_data:
+  app_logs:

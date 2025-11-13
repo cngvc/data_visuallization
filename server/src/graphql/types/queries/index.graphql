@@ -1,0 +1,21 @@
+type Query {
+  me: MeResponse!
+  me_organizations(page: Int, limit: Int, filters: OrganizationFilterInput): MeOrganizationResponse!
+  sales_summary(page: Int, limit: Int, filters: SalesSummaryFilterInput): SalesSummaryResponse!
+  revenue_recognition(page: Int, limit: Int, filters: RevenueRecognitionFilterInput): RevenueRecognitionResponse!
+  revenue_recognition_by_id(id: ID): RevenueRecognition
+  transactions(page: Int, limit: Int, filters: TransactionsFilterInput): TransactionsResponse!
+  import_history(page: Int, limit: Int, filters: ImportHistoryFilterInput): ImportHistoryResponse!
+  members(page: Int, limit: Int, filters: MemberFilterInput): MemberResponse!
+  courts(page: Int, limit: Int, filters: CourtFilterInput): CourtResponse!
+  event_categories(page: Int, limit: Int, filters: EventCategoryFilterInput): EventCategoryResponse!
+  reservation_types(page: Int, limit: Int, filters: ReservationTypeFilterInput): ReservationTypeResponse!
+  events(page: Int, limit: Int, filters: EventFilterInput): EventResponse!
+  reservations(page: Int, limit: Int, filters: ReservationFilterInput): ReservationResponse!
+  families(page: Int, limit: Int, filters: FamilyFilterInput): FamilyResponse!
+  membership_types(page: Int, limit: Int, filters: MembershipTypeFilterInput): MembershipTypeResponse!
+  player_reports(page: Int, limit: Int, filters: PlayerReportFilterInput): PlayerReportResponse!
+  reservation_players(page: Int, limit: Int, filters: ReservationPlayerFilterInput): ReservationPlayerResponse!
+  event_registrations(page: Int, limit: Int, filters: EventRegistrationFilterInput): EventRegistrationResponse!
+  organization(organization_id: ID!): OrganizationResponse!
+}

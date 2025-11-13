@@ -1,0 +1,12 @@
+type Court {
+  _id: ID
+  court_id: Int
+  label: String
+  type_name: String
+  order_index: Int
+}
+
+type CourtResponse {
+  data: [Court!]!
+  pagination: PaginationInfo!
+}

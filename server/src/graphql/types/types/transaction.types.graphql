@@ -1,0 +1,28 @@
+type Transaction {
+  _id: ID
+  transaction_id: Int
+  member_id: Member
+  transaction_type: String
+  payment_type: String
+  reservation_id: Reservation
+  event_id: Event
+  transaction_date: Date
+  is_paid: Boolean
+  subtotal: Float
+  tax_total: Float
+  total: Float
+  unpaid_amount: Float
+  paid_on: Date
+  category: String
+  reservation_start: Date
+  reservation_end: Date
+  account_creation_date: Date
+  instructors: String
+  created_at: Date
+  updated_at: Date
+}
+
+type TransactionsResponse {
+  data: [Transaction!]!
+  pagination: PaginationInfo!
+}

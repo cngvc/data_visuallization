@@ -1,0 +1,33 @@
+type Member {
+  _id: ID
+  member_id: Int
+  family_id: Family
+  first_name: String
+  last_name: String
+  gender: String
+  email: String
+  phone: String
+  date_of_birth: Date
+  address: String
+  city: String
+  state: String
+  zip_code: String
+  membership_type_id: MembershipType
+  membership_assignment_type: String
+  membership_status: String
+  family_role: String
+  allow_child_login: Boolean
+  membership_start_date: Date
+  membership_end_date: Date
+  profile_image_url: String
+  user_defined_fields: JSON
+  ratings: JSON
+  external_id: String
+  created_at: Date
+  updated_at: Date
+}
+
+type MemberResponse {
+  data: [Member!]!
+  pagination: PaginationInfo!
+}

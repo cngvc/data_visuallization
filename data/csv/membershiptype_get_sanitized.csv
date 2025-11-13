@@ -1,0 +1,46 @@
+Id,Name,Description,ShortCode,IsActive,OrderIndex,IsPaymentRequired,MembershipPurchaseStartDate,MembershipPurchaseEndDate,IsRestrictByAge,AllowMinAge,AllowMaxAge,XDaysPastDueToSuspendAccount,XDaysPastDueToAutoCancelMembership,InitiationPrice,QuarterMembershipPrice,AnnualMembershipPrice,CustomMembershipPrice,MonthlyMembershipPrice,CustomFrequencyUnitValue,LifetimeMembershipPrice,CostTypeAdditionalFeatureJson,CostTypeAdditionalFeatureList
+108631,The Founders,"14 Day Advanced Registration
+2 Guest Passes/Month
+Comes with custom The Pickle Jar T-Shirt",,True,0,True,,,False,,,,,,,240.0,,,,,,[]
+109031,Bread & Butter Annual ($270 + Tax),10 Day Advanced Registration,,True,1,True,,,False,,,10.0,10.0,,,270.0,,,,,,[]
+109041,(MONTHLY) Bread & Butter - ($25 + Tax),10 Day Advanced Registration,,True,2,True,,,False,,,10.0,,,,,,25.0,,,,[]
+109042,DROP IN (FREE Membership - $10 When You Come),2 Day Advanced Registration,,True,3,False,,,False,,,5.0,5.0,,,,,,,,,[]
+110226,Founders Family,,,True,4,True,,,False,,,10.0,10.0,,,120.0,,,,,,[]
+110497,Dill-uxe ($378 + Tax Includes 1 Guest Per Month),"12 Day Advanced Registration
+1 Guest Passes/Month",,True,5,True,,,False,,,10.0,10.0,,,378.0,,,,,,[]
+110498,Sweet & Sour,7 Day Advanced Registration,,True,6,True,,,False,,,10.0,10.0,,,168.0,,,,,,[]
+110499,Bread & Butter Annual - Seniors ($250 + Tax),10 Day Advanced Registration,,True,7,True,,,True,65.0,,10.0,10.0,,,250.0,,,,,,[]
+110500,Dill-uxe - Seniors ($358 + Tax),"12 Day Advanced Registration
+1 Guest Passes/Month",,True,8,True,,,True,65.0,,10.0,10.0,,,358.0,,,,,,[]
+110501,Sweet & Sour - Seniors,7 Day Advanced Registration,,True,9,True,,,True,65.0,,10.0,10.0,,,148.0,,,,,,[]
+110502,Dill-uxe Gherkins,"12 Day Advanced Registration
+",,True,10,True,,,True,,15.0,10.0,10.0,,,50.0,,,,,,[]
+110503,Sweet & Sour Gherkins (Kids U-15 $50 yearly w Active Parent Membership),7 Day Advanced Registration,,True,11,True,,,True,,15.0,10.0,10.0,,,50.0,,,,,,[]
+110504,Bread & Butter Gherkins,10 Day Advanced Registration,,True,12,True,,,True,,15.0,10.0,10.0,,,50.0,,,,,,[]
+110630,Pretty Pickler Dill-uxe,"12 Day Advanced Registration
+1 Guest Passes/Month",,True,13,True,,,False,,,10.0,10.0,,,338.0,,,,,,[]
+111746,Pretty Pickler Bread & Butter,10 Day Advanced Registration,,True,14,True,,,False,,,10.0,10.0,,,230.0,,,,,,[]
+113010,The Aaron Special,"14 Day Advanced Registration
+2 Guest Passes/Month
+Comes with custom The Pickle Jar T-Shirt",,True,15,False,,,False,,,10.0,10.0,,,,,,,,,[]
+114401,Coaches Deal,"14 Day Advanced Registration
+2 Guest Passes/Month
+Comes with custom The Pickle Jar T-Shirt",,True,16,True,,,False,,,10.0,10.0,,,100.0,,,,,,[]
+128295,General Manager,"14 Day Advanced Registration
+2 Guest Passes/Month
+Comes with custom The Pickle Jar T-Shirt",,True,18,False,,,False,,,10.0,10.0,,,,,,,,,[]
+128559,Gympass- New Member,,,True,19,False,,,False,,,1.0,,,,,,,,,,[]
+128812,FitOn Health- New Member,,,True,20,False,,,False,,,1.0,,,,,,,,,,[]
+139424,Johnson & Johnson / Janssen (Email to Verify),,,True,21,True,,,False,,,1.0,,,,192.0,,,,,,[]
+139787,Military / First Responders (Email to Verify),7 Day Advanced Registration,,True,22,True,,,False,,,30.0,30.0,,,200.0,,,,,,[]
+143577,Hollys Group,2 Day Advanced Registration,,True,23,False,,,False,,,5.0,5.0,,,,,,,,,[]
+144083,Basic Membership,,,True,24,True,,,False,,,1.0,,,,1200.0,,,,,,[]
+144087,Basic Membership w. Payment Plan,,,True,25,False,,,False,,,1.0,,,,,,,,,,[]
+144088,Premium Membership,,,True,26,True,,,False,,,,,,,2400.0,,,,,,[]
+144089,Premium Membership w. Payment Plan,,,True,27,False,,,False,,,1.0,,,,,,,,,,[]
+144090,Premium Winter Membership,,,True,28,True,,,False,,,,,,,1800.0,,,,,,[]
+144091,Premium Winter Membership w. Payment Plan,,,True,29,False,,,False,,,1.0,,,,,,,,,,[]
+144182,Basic - Founders,,,True,30,True,,,False,,,1.0,,,,1200.0,,,,,,[]
+144183,Premium - Founders ,,,True,31,True,,,False,,,,,,,2400.0,,,,,,[]
+144229,Basic - Founders w/ Payment,,,True,32,False,,,False,,,1.0,,,,,,,,,,[]
+144230,Premium Founders w/ Payment,,,True,33,False,,,False,,,1.0,,,,,,,,,,[]

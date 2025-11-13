@@ -1,0 +1,18 @@
+type ImportHistory {
+  _id: ID
+  filename: String
+  collection_name: String
+  record_count: Int
+  import_date: String
+  checksum: String
+  status: String
+  error_message: String
+  metadata: JSON
+  created_at: Date
+  updated_at: Date
+}
+
+type ImportHistoryResponse {
+  data: [ImportHistory!]!
+  pagination: PaginationInfo!
+}

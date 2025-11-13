@@ -1,0 +1,56 @@
+type Mutation {
+  signup(input: SignupInput!): AuthResponse!
+  login(input: LoginInput!): AuthResponse!
+  logout(input: LogoutInput!): MutationResponse!
+  refresh_token(input: RefreshTokenInput!): AuthResponse!
+  forgot_password(input: ForgotPasswordInput!): MutationResponse!
+  reset_password(input: ResetPasswordInput!): MutationResponse!
+  update_me(input: UpdateMeInput!): MutationResponse!
+  change_password_me(input: ChangePasswordInput!): MutationResponse!
+  add_organization_user(input: UserOrganizationInput!): MutationResponse!
+  update_organization_user(id: ID!, input: UserOrganizationInput!): MutationResponse!
+  remove_organization_user(input: RemoveOrganizationUserInput!): MutationResponse!
+  create_event(input: EventInput!): MutationResponse!
+  update_event(id: ID, input: EventInput!): MutationResponse!
+  delete_event(id: ID): MutationResponse!
+  create_membership_type(input: MembershipTypeInput!): MutationResponse!
+  update_membership_type(id: ID, input: MembershipTypeInput!): MutationResponse!
+  delete_membership_type(id: ID): MutationResponse!
+  create_organization(input: OrganizationInput!): MutationResponse!
+  update_organization(id: ID, input: OrganizationInput!): MutationResponse!
+  delete_organization(id: ID): MutationResponse!
+  create_auth_user(input: AuthInput!): MutationResponse!
+  update_auth_user(id: ID!, input: AuthInput!): MutationResponse!
+  delete_auth_user(id: ID!): MutationResponse!
+  create_court(input: CourtInput!): MutationResponse!
+  update_court(id: ID, input: CourtInput!): MutationResponse!
+  delete_court(id: ID): MutationResponse!
+  create_reservation_type(input: ReservationTypeInput!): MutationResponse!
+  update_reservation_type(id: ID, input: ReservationTypeInput!): MutationResponse!
+  delete_reservation_type(id: ID): MutationResponse!
+  create_family(input: FamilyInput!): MutationResponse!
+  update_family(id: ID, input: FamilyInput!): MutationResponse!
+  delete_family(id: ID): MutationResponse!
+  create_member(input: MemberInput!): MutationResponse!
+  update_member(id: ID, input: MemberInput!): MutationResponse!
+  delete_member(id: ID): MutationResponse!
+  create_member_report(input: PlayerReportInput!): MutationResponse!
+  update_member_report(id: ID, input: PlayerReportInput!): MutationResponse!
+  delete_member_report(id: ID): MutationResponse!
+  create_reservation(input: ReservationInput!): MutationResponse!
+  update_reservation(id: ID, input: ReservationInput!): MutationResponse!
+  delete_reservation(id: ID): MutationResponse!
+  create_sales_summary(input: SalesSummaryInput!): MutationResponse!
+  update_sales_summary(id: ID, input: SalesSummaryInput!): MutationResponse!
+  delete_sales_summary(id: ID): MutationResponse!
+  create_transaction(input: TransactionInput!): MutationResponse!
+  update_transaction(id: ID, input: TransactionInput!): MutationResponse!
+  delete_transaction(id: ID): MutationResponse!
+  create_revenue_recognition(input: RevenueRecognitionInput!): MutationResponse!
+  update_revenue_recognition(id: ID, input: RevenueRecognitionInput!): MutationResponse!
+  delete_revenue_recognition(id: ID): MutationResponse!
+  create_event_category(input: EventCategoryInput!): MutationResponse!
+  update_event_category(id: ID, input: EventCategoryInput!): MutationResponse!
+  delete_event_category(id: ID): MutationResponse!
+  delete_event_registration(id: ID): MutationResponse!
+}

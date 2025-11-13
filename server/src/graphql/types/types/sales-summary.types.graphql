@@ -1,0 +1,29 @@
+type SalesSummary {
+  _id: ID
+  transaction_id: Int
+  fee_category_name: String
+  item_name: String
+  revenue_category_name: String
+  amount: Float
+  amount_with_no_tax: Float
+  tax_total: Float
+  member_id: Member
+  family_id: Family
+  start: Date
+  end: Date
+  court_labels: String
+  payment_type: String
+  transaction_type: String
+  instructor_names: String
+  membership_name: String
+  transaction_date: Date
+  paid_date: Date
+  item_cost: Float
+  created_at: String
+  updated_at: String
+}
+
+type SalesSummaryResponse {
+  data: [SalesSummary!]!
+  pagination: PaginationInfo!
+}

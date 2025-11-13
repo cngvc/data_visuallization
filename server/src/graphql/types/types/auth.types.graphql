@@ -1,0 +1,50 @@
+type Auth {
+  _id: ID
+  email: String
+  first_name: String
+  last_name: String
+  role: UserRole
+  createdAt: Date
+  updatedAt: Date
+}
+
+type AuthResponse {
+  accessToken: String!
+  refreshToken: String!
+  user: AuthUser!
+}
+
+type AuthUser {
+  _id: ID!
+  email: String!
+  first_name: String
+  last_name: String
+  role: UserRole!
+  current_organization_id: Organization
+  role_in_current_organization: UserRole
+}
+
+type DeviceInfo {
+  deviceName: String
+  deviceType: String
+  os: String
+  browser: String
+  lastUsedAt: Date
+}
+
+type UserOrganization {
+  _id: ID
+  user_id: Auth
+  organization_id: Organization
+  role: UserRole
+  created_at: Date
+  updated_at: Date
+}
+
+type MeResponse {
+  data: AuthUser!
+}
+
+type MeOrganizationResponse {
+  data: [UserOrganization!]!
+}
